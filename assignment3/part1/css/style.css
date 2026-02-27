@@ -6,7 +6,7 @@ body {
   font: 1.2em / 1.5 system-ui;
   padding: 20px;
   width: 500px;
-  background-colour: #efefef;
+  background-color: #efefef;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
@@ -14,7 +14,7 @@ body {
 }
 
 ul {
-	background-colour: white;
+	background-color: white;
 	border: 30px solid purple;
 	border-radius: 20px;
 }
