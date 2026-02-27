@@ -58,3 +58,33 @@ p {
 section { 
 	text-indent: 2rem;
 }
+
+a:link {
+	color: #aa6666;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover {
+	color: darkred;
+	text-decoration: none;
+}
+
+a:focus {
+	color: darkred;
+	text-decoration: none;
+	outline: none;
+}
+
+a[href^="http"]::after {
+	content: "";
+	display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	margin-left: 0.25em;
+
+	background-size: 100%;
+	background-image: url("external-link-52.png")
+}
