@@ -88,3 +88,17 @@ a[href^="http"]::after {
 	background-size: 100%;
 	background-image: url("external-link-52.png")
 }
+
+ol {
+	line-height: 1.5;
+	margin-top: ;
+	margin-bottom:;
+	list-style-type: lower-alpha;
+}
+
+ul {
+	line-height: 1.5;
+	margin-top:;
+	margin-bottom:;
+	list-style-type: square;
+}
