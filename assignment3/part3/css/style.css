@@ -9,6 +9,19 @@ body {
   font: 1.2em / 1.6 sans-serif;
 }
 
+main {
+	display:flex;
+	gap: 20px;
+}
+
+article {
+	flex: 3;
+}
+
+aside { 
+	flex: 1;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -30,17 +43,16 @@ img {
 nav {
   background-color: black;
   padding: 0.5em;
-  display: flex;
-  justify-content: space-around;
   position: sticky;
   top:0;
 }
 
 nav ul {
+  display: flex;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: flex;
+  list-style-type: none;
 }
 
 nav a {
@@ -52,6 +64,9 @@ nav a {
 
 .photos {
   list-style: none;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 5px;
   margin: 0;
   padding: 0;
 }
