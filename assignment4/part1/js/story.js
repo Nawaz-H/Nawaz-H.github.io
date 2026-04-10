@@ -33,14 +33,20 @@ function returnRandomStoryString() {
 
 generateBtn.addEventListener("click", generateStory);
 
+let newStory = returnRandomStoryString();
+
 function generateStory() {
   if (customName.value !== "") {
     const name = customName.value;
+    newStory = newStory.replaceAll("Bob", name);
   }
 
   if (document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature = Math.round(94);
+    const weight = Math.round(300 / 14) + " stone";
+    const temperature = Math.round(5/9 * (94 - 32));
+
+    newStory = newStory.replaceAll("300 pounds", weight);
+    newStory = newStory.replaceAll("94 Fahrenheit", temperature);
   }
 
   // TODO: replace "" with the correct expression
