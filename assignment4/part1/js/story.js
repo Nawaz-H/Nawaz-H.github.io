@@ -1,4 +1,3 @@
-// Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
 const generateBtn = document.querySelector(".generate");
@@ -9,14 +8,12 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-// Raw text strings
 
 const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const places     = ["the soup kitchen", "disneyland", "the White House"];
 const events     = ["sponataneously combusted", "melted into a puddle on the sidewalk","turned into a slug and slithered away"];
 
 
-// Partial return random string function
 
 function returnRandomStoryString() {
 	const randomCharacter = randomValueFromArray(characters);
@@ -29,27 +26,26 @@ function returnRandomStoryString() {
   return storyText;
 }
 
-// Event listener and partial generate function definition
 
 generateBtn.addEventListener("click", generateStory);
 
-let newStory = returnRandomStoryString();
 
 function generateStory() {
-  if (customName.value !== "") {
-    const name = customName.value;
-    newStory = newStory.replaceAll("Bob", name);
+	let newStory = returnRandomStoryString();
+     if (customName.value !== "") {
+     	const name = customName.value;
+     newStory = newStory.replaceAll("Bob", name);
   }
 
   if (document.getElementById("uk").checked) {
     const weight = Math.round(300 / 14) + " stone";
-    const temperature = Math.round(5/9 * (94 - 32));
+    const temperature = Math.round(5/9 * (94 - 32)) + " Celcius";
 
     newStory = newStory.replaceAll("300 pounds", weight);
     newStory = newStory.replaceAll("94 Fahrenheit", temperature);
   }
 
-  // TODO: replace "" with the correct expression
-  story.textContent = "";
+
+  story.textContent = newStory;
   story.style.visibility = "visible";
 }
