@@ -11,3 +11,36 @@ const images = [
       { filename: "pic4", alt: "Section of wall from a pharoah's tomb"},
       { filename: "pic5", alt: "Large moth on a leaf"}
    ];
+
+
+const baseURL = "images/";
+
+for (const image of images){
+	const picture = document.createElement("img");
+	picture.src   = baseURL + image.filename + ".jpg";
+	picture.alt   = image.alt;
+	thumbBar.appendChild(picture);
+
+	picture.addEventListener("click", updateDisplayedImage);
+	
+}
+
+function updateDisplayedImage(evt){
+		displayedImage.src = evt.target.src;
+		displayedImage.alt = evt.target.alt;
+}
+
+btn.addEventListener("click",() => {
+	if (btn.classList.contains("dark"))
+	{
+		btn.textContent = "Lighten";
+		overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+	}
+	else 
+	{
+		btn.textContent = "Darken";
+		overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+	}
+
+	btn.classList.toggle("dark");
+});
