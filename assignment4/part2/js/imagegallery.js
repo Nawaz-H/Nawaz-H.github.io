@@ -13,7 +13,7 @@ const images = [
    ];
 
 
-const baseURL = "images/";
+const baseURL = "img/";
 
 for (const image of images){
 	const picture = document.createElement("img");
