@@ -22,9 +22,9 @@
   </head>
 
   <body>
-    <div class="header">
+    <header>
       <h1> Welcome to our wildlife website </h1>
-    </div>
+    </header>
 
     <nav>
       <ul>
@@ -58,6 +58,7 @@
       <p> Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears. </p>
         
         <table>
+          <caption> Comparison between wild and urban bears. </caption>
           <thead>
             <tr>
               <th scope = "col"> Bear Type </th>
@@ -109,8 +110,10 @@
         <audio controls>
           <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
-          <p>It looks like your browser doesn't support HTML5 audio players.</p>
+          <p>It looks like your browser doesn't support HTML5 audio players.
+<a href="media/bear.mp3"> Download the audio file from this link! </a></p>
         </audio>
+        <h3> Audio Transcript </h3>
         <p> This isn't really an audio fact file about bears, but it is an audio file that you can transcribe </p> 
 
         <aside>
@@ -123,7 +126,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <button class="show-hide"> Show comments </button>
 
           <div class="comment-wrapper">
 
@@ -131,11 +134,11 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
+                <label for="name"> Your name: </label>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment"> Your comment: </label>
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
